@@ -2,8 +2,33 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="450"
         x:Class="Demo1203.MainWindow"
-        Title="Demo1203">
-    Welcome to Avalonia!
+        Title="Demo1203"
+		Width="600" Height="450"
+		WindowStartupLocation="CenterScreen">
+	<StackPanel
+		HorizontalAlignment="Center"
+		VerticalAlignment="Center">
+		<TextBlock
+			Text="Вход"
+			HorizontalAlignment="Center"/>
+		<TextBox
+			Name="LoginTextBox"
+			Watermark="Логин"/>
+		<TextBox
+			Name="PasswordTextBox"
+			Watermark="Пароль"/>
+		<Button
+			Click="LoginButton_Click"
+			Content="Вход"
+			HorizontalAlignment="Center"/>
+		<TextBlock
+			Text="или"
+			HorizontalAlignment="Center"/>
+		<Button
+			Click="LoginAsGuestButton_Click"
+			Content="Войти как гость"
+			HorizontalAlignment="Center"/>
+	</StackPanel>
 </Window>
